@@ -7,6 +7,7 @@ using UnityEngine.InputSystem.Layouts;
 public class DrumSoundPlayer : MonoBehaviour
 {
     public AudioSource crash, kick_bass, snare, tom_1, tom_2, tom_3, tom_4;
+    
     // Start is called before the first frame update
     void Start()
     {

@@ -9,18 +9,18 @@ public class PianoSoundPlayer : MonoBehaviour
     // Start is called before the first frame update
     public AudioSource F3,G3, A3,B3, C4, D4, E4, F4, G4, A4, B4, C5, D5, E5, F5, G5, A5, B5, C6, soundtrack;
 
-    public static IEnumerator FadeMusic(AudioSource audioSource, float duration, float targetVolume)
-    {
-        float currentTime = 0;
-        float start = audioSource.volume;
-        while (currentTime < duration)
-        {
-            currentTime += Time.deltaTime;
-            audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
-            yield return null;
-        }
-        yield break;
-    }
+    // public static IEnumerator FadeMusic(AudioSource audioSource, float duration, float targetVolume)
+    // {
+    //     float currentTime = 0;
+    //     float start = audioSource.volume;
+    //     while (currentTime < duration)
+    //     {
+    //         currentTime += Time.deltaTime;
+    //         audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+    //         yield return null;
+    //     }
+    //     yield break;
+    // }
     void Start()
     {
         InputSystem.onDeviceChange += (device, change) =>
